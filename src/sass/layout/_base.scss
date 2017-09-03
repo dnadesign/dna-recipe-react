@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+
+	@include respond(print) {
+		* {
+			background: transparent !important;
+			color: black !important;
+			box-shadow: none !important;
+			text-shadow: none !important;
+			filter: none !important;
+			-ms-filter: none !important;
+			-webkit-text-size-adjust: 100% !important;
+			line-height: 1.5em;
+			-webkit-transition: none !important;
+			transition: none !important;
+		}
+	}
+}
+
+html {
+	position: relative;
+}
+
+body {
+	background-color: $body-bg;
+}
+
+@include respond(print) {
+	@page {
+		margin: 2cm 2cm 2.5cm 2cm;
+		size: A4;
+	}
+}

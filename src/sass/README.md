@@ -1,0 +1,2 @@
+# This is not the place for component CSS 
+As this is a React app, keep your CSS in with the component that it belongs to. This is a good way to ensure that BEM is being adhered to, and also makes it easy for others to work in one place.

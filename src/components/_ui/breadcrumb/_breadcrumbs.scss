@@ -1,0 +1,34 @@
+/*
+# Breadcrumbs
+
+Site breadcrumbs
+
+Template: Includes/Breadcrumbs
+
+Styleguide 4.1
+*/
+
+.breadcrumbs {
+	&-list {
+		margin: 15px 0 10px 0;
+		padding: 0;
+	}
+
+	&-item {
+		display: inline;
+		font-size: 0.8em;
+	}
+
+	&-link {
+		position: relative;
+		padding-right: 17px;
+
+		&:after {
+			display: block;
+			content: '\003E';
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}

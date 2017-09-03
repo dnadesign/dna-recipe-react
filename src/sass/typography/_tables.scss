@@ -1,0 +1,134 @@
+/*
+#Tables
+
+Template: StyleGuide/SGCMSTables
+
+Styleguide 3.5
+*/
+
+table {
+	@extend .pure-table !optional;
+	background: $table-bgcolor;
+	border: $table-border-size $table-border-style $table-border-color;
+	border-top: 5px solid $primary-color;
+	border-bottom: 5px solid $primary-color;
+	width: 100%;
+	margin-bottom: 40px;
+	table-layout: fixed;
+
+	&.table--data {
+		table-layout: auto;
+	}
+
+	@include respond(lg__max) {
+		display: block;
+		thead,
+		tbody,
+		th,
+		td,
+		tr {
+			display: block;
+		}
+	}
+
+	thead {
+		background: $table-thead-bgcolor;
+		color: $table-thead-color;
+
+		th {
+			font-family: $font-bold;
+			font-size: 1.2em;
+			line-height: 1.5em;
+			border-bottom: 2px solid $table-cell-border-color;
+		}
+
+		tr {
+			@include respond(lg__max) {
+				position: absolute;
+				top: -100%;
+				left: -100%;
+			}
+		}
+	}
+
+	td,
+	th {
+		vertical-align: top;
+		border-left: 0;
+
+		@include respond(lg__max) {
+			padding: 0;
+		}
+
+		@include respond(lg) {
+			border-right: $table-cell-border-size $table-cell-border-style
+				$table-cell-border-color;
+		}
+
+		&:last-child {
+			border-right: 0;
+		}
+		@include respond(lg) {
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+
+	th {
+		font-family: $table-header-font-family;
+		font-weight: normal;
+		text-align: left;
+		border-right: 0;
+	}
+
+	td {
+		@include respond(lg) {
+			width: 40%;
+		}
+	}
+
+	tbody {
+		th {
+			margin-bottom: 23px;
+			font-size: 18px;
+			font-family: $font-bold;
+			line-height: 20px;
+
+			@include respond(lg) {
+				width: 20%;
+				max-width: 150px;
+				font-size: 20px;
+				line-height: 25px;
+			}
+		}
+
+		th,
+		td {
+			@include respond(lg__max) {
+				position: relative;
+			}
+		}
+
+		tr {
+			th {
+				border-top: $table-cell-border-size $table-cell-border-style
+					$table-cell-border-color;
+			}
+
+			td {
+				@include respond(lg) {
+					border-top: $table-cell-border-size $table-cell-border-style
+						$table-cell-border-color;
+				}
+			}
+
+			&:first-child {
+				th,
+				td {
+					border-top: 0;
+				}
+			}
+		}
+	}
+}

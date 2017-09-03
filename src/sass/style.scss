@@ -1,0 +1,58 @@
+/**
+ * Couldn't get folder imports working. So pulled them all in manually
+ * for now. Also need to work out how this will work with the style 
+ * guide, if at all?
+ */
+@import '../css/pure.src'; // import pure as sass for extending
+
+/*
+# Brand Overview
+
+Define the colours and fonts used throughout the web app
+
+Styleguide 1.0
+*/
+@import "utilities/functions";
+@import "utilities/var-globals";
+@import "utilities/respond";
+@import "utilities/classes";
+
+/*
+# Layout
+
+Grid and layout related styling. We are using pure's grid system. More in depth documentation can be found at:
+http://purecss.io/grids/
+
+Styleguide 2.0
+*/
+@import "layout/alignment.scss";
+@import "layout/base.scss";
+@import "layout/container.scss";
+@import "layout/grid.scss";
+
+/*
+# Typography
+
+Styles for typographical and related elements editable in Silverstripe's HTML Text editor.
+This includes headings, paragraphs, quotes, links, lists, images, media, and tables.
+
+Styleguide 3.0
+*/
+@import "typography/fonts";
+@import "typography/headings";
+@import "typography/links";
+@import "typography/lists";
+@import "typography/media";
+@import "typography/tables";
+@import "typography/type";
+
+/*
+# Forms
+
+Form, and form element styles
+
+Styleguide 5.0
+*/
+
+@import "forms/pure-form";
+@import "forms/text";

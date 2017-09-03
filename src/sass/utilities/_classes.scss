@@ -1,0 +1,65 @@
+/**
+ * Utility classes are short modifiers used across components
+ * These should be used sparingly. In most cases a component is a better choice.
+ */
+
+// Generic style for meta data
+.metadata {
+	font-size: $base-font-size - 3;
+}
+
+/**
+ * Screen reader helper classes
+ */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+
+	&--focusable:active,
+	&--focusable:focus {
+		position: static;
+		width: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		clip: auto;
+	}
+}
+
+.printonly {
+	display: none;
+
+	@include respond(print) {
+		display: block;
+	}
+}
+
+// Responsive visibility classes
+//
+// Usage example: .hidden-sm (hidden while the screen size is equal to or larger than sm)
+// Usage example: .hidden-xl
+// Usage example: .hidden-md--max (hidden while the screen size is smaller than md)
+//
+html body { // more specifity
+	@each $breakpoint, $value in $breakpoints {
+		@include respond($breakpoint) {
+			.hidden-#{$breakpoint} {
+				display: none;
+			}
+		}
+
+		@if $breakpoint != 'base' {
+			@include respond($breakpoint, 'max') {
+				.hidden-#{$breakpoint}--max {
+					display: none;
+				}
+			}
+		}
+	}
+}

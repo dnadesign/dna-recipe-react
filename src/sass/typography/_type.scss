@@ -1,0 +1,97 @@
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *= "pure-u"] {
+	font-family: $font;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+#Text elements
+
+Template: StyleGuide/SGCMSText
+
+Generic text elements such as paragraphs, strong, em, sup, sub, hr and links
+
+Styleguide 3.6
+*/
+
+%type--defaults {
+	color: $font-color;
+	font-family: $font;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: normal;
+
+	@include respond(sm) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	@include respond(lg) {
+		font-size: $base-font-size;
+		line-height: 25px;
+	}
+	@include respond(print) {
+		color: #000;
+		font-size: 12pt;
+		line-height: 1.5em;
+	}
+}
+
+body {
+	@extend %type--defaults;
+}
+
+p {
+	@extend %type--defaults;
+	margin-bottom: 20px;
+
+	@include respond(lg) {
+		margin-bottom: 22px;
+	}
+
+	@include respond(print) {
+		orphans: 3;
+		widows: 3;
+		page-break-after: auto;
+		page-break-inside: avoid;
+	}
+}
+
+b,
+strong {
+	font-family: $font-bold;
+	font-weight: normal;
+}
+
+i,
+em {
+	font-family: $font-italic;
+	font-style: italic;
+}
+
+pre,
+blockquote {
+	border-left: 5px solid $secondary-color;
+	padding-left: 20px;
+	margin-left: 0;
+
+	@include respond(print) {
+		border-left: 5px solid #000;
+		page-break-inside: avoid;
+	}
+}
+
+hr {
+	border: 0;
+	border-bottom: 5px solid $primary-color;
+	margin: 20px 0;
+
+	@include respond(print) {
+		border-top: 5px solid #000;
+	}
+}

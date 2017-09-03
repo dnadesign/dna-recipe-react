@@ -1,0 +1,37 @@
+/*
+# Textfields
+
+Text input fields
+
+Template: StyleGuide/SGTextField
+
+Styleguide 5.1
+*/
+
+$input-color: $primary-color;
+
+input.text {
+	background-color: #ffffff;
+	color: $input-color;
+	font-family: $font-medium;
+	font-size: 16px;
+	line-height: 30px;
+	max-width: 100%;
+
+	@include respond(md) {
+		font-family: $font-bold;
+		font-size: 25px;
+	}
+
+	.field & {
+		border: 2px solid $input-color;
+		border-radius: 0;
+		box-shadow: none;
+		box-sizing: border-box;
+		height: 40px;
+
+		@include respond(md) {
+			height: 60px;
+		}
+	}
+}

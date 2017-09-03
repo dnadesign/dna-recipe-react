@@ -1,0 +1,12 @@
+$red: red;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+.App {
+  text-align: center;
+  color: $red;
+  @include border-radius(10px);
+}

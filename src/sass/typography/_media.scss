@@ -1,0 +1,162 @@
+/*
+#Images
+
+Template: StyleGuide/SGCMSImages
+
+Styling for CMS images inserted via tinymce. Options are: <br /><br />
+&bull; Left, text wrapping<br />
+&bull; Right, text wrapping<br />
+&bull; Left alone (no text wrapping)<br />
+&bull; Centered alone (no text wrapping)<br /><br />
+... with optional captions
+
+
+Styleguide 3.4
+*/
+
+svg {
+	max-width: 100%;
+}
+
+iframe {
+	border: 0;
+	max-width: 100%;
+	max-height: 230px;
+	@include respond(sm) {
+		max-height: 300px;
+	}
+	@include respond(md) {
+		max-height: 350px;
+	}
+	@include respond(lg) {
+		max-height: 415px;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+
+	&.right {
+		float: right;
+		clear: right;
+		margin: 30px 0 30px 50px;
+	}
+	&.left {
+		float: left;
+		clear: left;
+		margin: 30px 50px 30px 0px;
+	}
+	&.leftAlone {
+		margin: 30px 50px 30px 0;
+		float: none;
+		display: block;
+		clear: both;
+	}
+	&.center {
+		display: block;
+		margin: 30px auto 30px auto;
+		clear: both;
+	}
+}
+
+/*
+#Media (youtube, etc)
+
+CMS Styling for youtube, vimeo etc media included via oembed. These work much the same as images. Options are: <br /><br />
+&bull; Left, text wrapping<br />
+&bull; Right, text wrapping<br />
+&bull; Left alone (no text wrapping)<br />
+&bull; Centered alone (no text wrapping)
+
+Template: StyleGuide/SGCMSMedia
+
+Styleguide 3.4.1
+*/
+
+/* Media insert formatting  (Youtube embed) */
+.media {
+	&.center {
+		margin: 0 auto;
+		text-align: center;
+	}
+	&.left {
+		float: left;
+		clear: left;
+		margin: 0 50px 30px 0px;
+	}
+	&.leftAlone {
+		margin: 0 50px 30px 0;
+		float: none;
+		display: block;
+		clear: both;
+	}
+	&.right {
+		float: right;
+		clear: right;
+		margin: 0 0 30px 50px;
+	}
+}
+
+figure.featured-image {
+	img {
+		margin-bottom: 0;
+	}
+}
+
+.captionImage,
+figure.featured-image {
+	max-width: 100%;
+
+	&.left {
+		float: left;
+		margin: 5px 50px 30px 20px;
+	}
+	&.right {
+		float: right;
+		margin: 5px 0 30px 50px;
+	}
+	&.leftAlone {
+		float: none;
+		margin: 5px 50px 30px 0px;
+	}
+
+	&.center {
+		margin: 5px auto 30px;
+	}
+
+	&.left,
+	&.right,
+	&.leftAlone,
+	&.center {
+		@include respond(sm) {
+			margin-bottom: 30px;
+			margin-top: 10px;
+			p {
+				text-align: center;
+				margin: 0px 0 0 20px;
+			}
+		}
+	}
+
+	p {
+		clear: both;
+		margin: 0px;
+		text-align: center;
+		padding-top: 1px;
+		font-weight: normal;
+		font-family: $font;
+		padding-bottom: 2px;
+
+		.typography & {
+			font-size: 0.8em;
+			line-height: 1.5em;
+		}
+	}
+
+	img {
+		margin: 0 0 5px 0;
+		border: 0;
+	}
+}

@@ -1,0 +1,36 @@
+/*
+# Container
+
+The purpose of the container is to limit the width of content.
+It may also serve a secondary purpose of allowing for margin or
+padding at mobile, but we have found it easier to build padding and gutters
+into components at desktop size.
+
+Markup:
+<div class="container">
+	The grid normally lives within a container
+</div>
+
+Styleguide 2.3
+*/
+
+.container {
+	margin: 0 15px;
+
+	@include respond(sm) {
+		margin: 0 20px;
+	}
+
+	@include respond(md) {
+		margin: 0 30px;
+	}
+
+	@include respond(lg) {
+		margin: 0 auto;
+		max-width: $container-width;
+	}
+	@include respond(print) {
+		margin: 0;
+		max-width: none;
+	}
+}

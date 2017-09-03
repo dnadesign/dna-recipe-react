@@ -1,0 +1,102 @@
+/*
+#Buttons
+
+The default buttons used across the theme
+
+Markup:
+<button class="pure-button">button</button>
+<button class="pure-button pure-button--success">success button</button>
+<button class="pure-button pure-button--error">error button</button>
+<button class="pure-button pure-button--warning">warning button</button>
+<button class="pure-button pure-button--secondary">secondary button</button>
+<button class="pure-button pure-button--primary">primary button</button>
+
+Styleguide 4.2
+*/
+
+.pure-button {
+	background-color: $default-color; //make this use our defualt variable
+	border-radius: 3px;
+	color: $font-color;
+	padding: 0.4em 1em;
+
+
+	// normalize inner elements
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		-webkit-appearance: none;
+		display: block;
+		background: none;
+		border: none;
+		color: inherit;
+	}
+
+	&--default {
+		border: 1px solid darken($default-color, 3%);
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+		&:hover {
+			color: $font-color;
+		}
+	}
+
+	&--success,
+	&--error,
+	&--warning,
+	&--secondary,
+	&--primary {
+		color: white;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	&--primary {
+		background: $primary-color; // Make this use our primary colour variable
+	}
+
+	&--success {
+		background: $success-color;
+	}
+
+	&--error {
+		background: $error-color;
+	}
+
+	&--warning {
+		background: $warning-color;
+	}
+
+	&--secondary {
+		background: $secondary-color;
+	}
+
+	&--xs {
+		font-size: 70%;
+	}
+
+	&--s {
+		font-size: 85%;
+	}
+
+	&--l {
+		font-size: 110%;
+	}
+
+	&--xl {
+		font-size: 125%;
+	}
+
+	&--pill {
+		border-radius: 40px;
+		padding: 0.3em 1em;
+	}
+}
+
+h1, h2, h3 {
+	a.pure-button--with-heading {
+		margin-left: 20px;
+		font-size: 15px;
+		line-height: 1em;
+		vertical-align: middle;
+	}
+}

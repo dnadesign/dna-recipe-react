@@ -1,0 +1,124 @@
+/*
+#Loader
+
+Markup:
+<span class="loader loader--dark"><span class="loader-text">Loading</span></span>
+
+Loading indicator. Based on http://projects.lukehaas.me/css-loaders
+
+Styleguide 4.4
+*/
+
+
+
+.loader {
+
+	.ie9 & {
+		text-indent: 0;
+		line-height: 110px;
+		border: 0;
+		background: none;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	&,
+	&:before,
+	&:after {
+		border-radius: 50%;
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: '';
+	}
+	&:before {
+		width: 5.2em;
+		height: 10.2em;
+		background: $primary-color;
+		border-radius: 10.2em 0 0 10.2em;
+		top: -0.1em;
+		left: -0.1em;
+		-webkit-transform-origin: 5.2em 5.1em;
+		transform-origin: 5.2em 5.1em;
+		-webkit-animation: load 1.5s infinite ease 1s;
+		animation: load 1.5s infinite ease 1s;
+	}
+	&.loader--dark  {
+		&:before {
+			background: #fff;
+		}
+	}
+}
+
+.loader {
+	box-shadow: inset 0 0 0 1em;
+	color: #ffffff;
+	display: block;
+	font-size: 11px;
+	height: 10em;
+	margin: 0 auto;
+	position: relative;
+	text-indent: -9999em;
+	transform: translateZ(0);
+	width: 10em;
+
+	&--dark {
+		color: $primary-color;
+	}
+
+	&-text {
+		color: #fff;
+		font-size: 12px;
+		display: block;
+		text-transform: uppercase;
+
+		.loader--dark & {
+			color: $primary-color;
+		}
+	}
+
+	&:after {
+		width: 5.2em;
+		height: 10.2em;
+		background: $primary-color;
+		border-radius: 0 10.2em 10.2em 0;
+		top: -0.1em;
+		left: 5.1em;
+		-webkit-transform-origin: 0px 5.1em;
+		transform-origin: 0px 5.1em;
+		-webkit-animation: load 1.5s infinite ease;
+		animation: load 1.5s infinite ease;
+	}
+
+	&.loader--dark {
+		&:after {
+			background: #fff;
+		}
+	}
+}
+
+@-webkit-keyframes load {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes load {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}

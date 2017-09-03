@@ -1,0 +1,36 @@
+/*
+#Lists
+
+Template: StyleGuide/SGCMSLists
+
+Generic lists (bullet points), Numbered lists, and Definition lists
+
+Styleguide 3.3
+*/
+
+ul,
+ol {
+	font-size: $base-font-size;
+
+	&.list--inline {
+		margin: 0px 0 10px 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			margin-left: 10px;
+			margin-right: 0;
+		}
+	}
+}
+
+dl {
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		padding-top: 5px;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+}

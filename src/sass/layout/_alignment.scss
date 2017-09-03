@@ -1,0 +1,119 @@
+/*
+# Vertical align
+
+Vertically align an element within another.
+NOTE: this element requires a height. The style tags are for show only
+
+Markup:
+<div class="align align--middle show-grid" style="height: 100px;">
+	<span>I am vertically centered</span>
+</div>
+<div class="align align--bottom show-grid" style="height: 100px;">
+	<span>I am aligned with the bottom</span>
+</div>
+<div class="pure-g--middle pure-g show-grid" style="height: 100px;">
+	<div class="pure-u-1 pure-u-md-3-5 pure-u-lg-1-2">
+		<h3>I am a center aligned col</h3>
+	</div>
+	<div class="pure-u-1 pure-u-md-2-5 pure-u-lg-1-2">
+		<h3>I am a center aligned col</h3>
+	</div>
+</div>
+
+
+Styleguide 2.2.0
+*/
+.align {
+	display: table;
+
+	> * {
+		display: table-cell;
+	}
+
+	&--middle {
+		> * {
+			vertical-align: middle;
+		}
+	}
+
+	&--bottom {
+		> * {
+			vertical-align: bottom;
+		}
+	}
+}
+
+// Vertical alignment for use with the pure grid
+.pure-g--middle {
+	> * {
+		vertical-align: middle;
+	}
+}
+
+/*
+# Pull classes
+
+Generic pull directions, and clearfix. `.pull--right`, `.pull--left`, `.clearfix`
+
+NOTE: these should be used rarely - its better to build into a componenet if/when possible
+
+Markup:
+<div class="pull--left">
+	left floated
+</div>
+<div class="pull--right">
+	right floated
+</div>
+<div class="clearfix">
+	cleared fix ;)
+</div>
+
+
+Styleguide 2.2.1
+*/
+.pull {
+	&--right {
+		float: right;
+	}
+
+	&--left {
+		float: left;
+	}
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+/*
+# Text alignment
+
+Generic text alignment classes
+
+NOTE: these should be used rarely - its better to build into a componenet if/when possible
+
+Markup:
+<p class="text--left">
+	text aligned left
+</p>
+<p class="text--center">
+	text aligned to the center
+</p>
+<p class="text--right">
+	text aligned right
+</p>
+
+Styleguide 2.2.2
+*/
+.text {
+	&--left {
+		text-align: left;
+	}
+	&--center {
+		text-align: center;
+	}
+	&--right {
+		text-align: right;
+	}
+}

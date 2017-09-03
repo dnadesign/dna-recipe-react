@@ -1,0 +1,66 @@
+/*
+#Headings
+
+Template: StyleGuide/SGCMSHeadings
+
+Headings come in two styles. To use the alternate style, add
+``class="heading-alt"`` to your heading
+
+Styleguide 3.1
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-heading;
+	line-height: 1.3em;
+
+	&.heading-alt {
+		font-family: $font-heading--alt;
+	}
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: 700;
+
+	&.heading-alt {
+		font-size: 90px;
+	}
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 700;
+
+	&.heading-alt {
+		font-size: 70px;
+	}
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: 700;
+
+	&.heading-alt {
+		font-size: 50px;
+	}
+}
+
+h4 {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: 400;
+}

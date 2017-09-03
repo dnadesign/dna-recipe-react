@@ -1,0 +1,97 @@
+/*
+#Text elements
+
+Template: StyleGuide/SGCMSText
+
+Generic text elements such as paragraphs, strong, em, sup, sub, hr and links
+
+Styleguide 3.2
+*/
+
+%decorated-link {
+	left: 0;
+	margin: 0 5px 0 0px;
+
+	&:before {
+		color: $font-color;
+		font-size: 1.4em;
+		line-height: 1.2em;
+		position: relative;
+		top: 2px;
+		text-decoration: none;
+		zoom: 1;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		margin-right: 3px;
+	}
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	h3 & {
+		color: $font-color;
+		i {
+			color: $link-color;
+		}
+	}
+
+	&:visited {
+		color: $link-visited-color;
+
+		h3 & {
+			color: $font-color;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+
+		h3 & {
+			color: $link-color;
+		}
+	}
+
+	&.external {
+		@extend %decorated-link;
+
+		&:before {
+		}
+	}
+
+	&[href$=".png"],
+	&[href$=".PNG"],
+	&[href$=".gif"],
+	&[href$=".GIF"],
+	&[href$=".jpg"],
+	&[href$=".JPG"],
+	&[href$=".jpeg"],
+	&[href$=".JPEG"] {
+		@extend %decorated-link;
+		&:before {
+		}
+	}
+
+	&[href$=".doc"],
+	&[href$=".DOC"],
+	&[href$=".docx"],
+	&[href$=".DOCX"],
+	&.doc,
+	&[href$=".xls"],
+	&[href$=".XLS"],
+	&[href$=".xlsx"],
+	&[href$=".XLSX"],
+	&.xls,
+	&[href$=".pdf"],
+	&[href$=".PDF"],
+	&.pdf {
+		@extend %decorated-link;
+
+		&:before {
+		}
+	}
+}
