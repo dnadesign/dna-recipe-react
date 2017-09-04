@@ -24,12 +24,11 @@ class Home extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
         	<div>
-        		<Helmet>
-
-        		</Helmet>
+                <Helmet>
+                    <title>Homepage</title>
+                </Helmet>
         		<h1>Home</h1>
         		<p>Home page</p>
         	</div>

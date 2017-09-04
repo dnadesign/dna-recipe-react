@@ -25,8 +25,11 @@ class App extends Component {
     getHeader() {
         return (
             <Helmet>
-                <meta charSet="utf-8" />
                 <title>DNA React Recipe</title>
+                <meta property="og:title" content="DNA React Recipe"/>
+                <meta property="og:image" content="image.pnh"/>
+                <meta property="og:site_name" content="DNA React Recipe"/>
+                <meta property="og:description" content=""/>
             </Helmet>
         );
     }
@@ -34,7 +37,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                { this.getHeader }
+                { this.getHeader() }
                 <Header />
                 <main>
                     <Route exact path="/" component={ Home } />
