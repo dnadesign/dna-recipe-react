@@ -9,8 +9,8 @@ import Header from '../_header/Header';
 import Footer from '../_footer/Footer';
 
 // Pages
-import Home from '../_pages/home/Home';
-import Contact from '../_pages/contact/Contact';
+import Home from '../__views/home/Home';
+import Contact from '../__views/contact/Contact';
 
 // Style imports
 import './App.scss';

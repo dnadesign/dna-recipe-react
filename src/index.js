@@ -15,7 +15,7 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './components/_app/App';
 
 // Import all global styles
-import './sass/style.scss';
+import './globals/sass/style.scss';
 
 ReactDOM.render(
 	<Provider store={ store }>

@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet';
 // Actions
 import {
     getPosts
-} from '../../../actions'
+} from '../../../globals/actions';
 
 class Home extends Component {
 

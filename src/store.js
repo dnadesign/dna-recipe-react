@@ -14,7 +14,7 @@ import thunk from 'redux-thunk';
 // https://www.npmjs.com/package/history
 import createHistory from 'history/createBrowserHistory';
 
-import rootReducer from './reducers';
+import rootReducer from './globals/reducers';
 
 export const history = createHistory();
 
